@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital@1&family=Montserrat&display=swap');
+
+:root{
+--f-style: 'KoHo', sans-serif;
+--f-normal: 'Montserrat', sans-serif;
+
+--white:#fff;
+--black:#000;
+--red:#ff0000;
+--cyan:#00ffff;
+--darkcyan:#00d6d6;
+}
+
+*{
+   padding:0;
+   margin:0;
+   box-sizing:border-box;
+   text-decoration:none;
+ } 
+::selection{
+  background:var(--red);
+  color:var(--white);
+}
+.section{
+   position:relative;
+   height:100vh;
+   width:100%;
+   background:var(--white);
+   color:var(--black);
+   border-bottom:3px solid var(--darkcyan);
+ }
+.center{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   flex-direction:column;
+ }
+button{
+  padding:15px;
+  background:var(--white);
+  color:var(--black);
+  border-radius:15px;
+  border:none;
+  box-shadow:0 0 3px #6b6b6b,
+             0 0 4px #202020;
+}
+button:hover{
+  color:var(--darkcyan);
+}
+a:hover{
+  color:var(--red);
+}
+h2{
+  position:absolute;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:2rem;
+  text-align:center;
+}
+header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px;
+  font-size:17px;
+  font-weight:600;
+  letter-spacing:3px;
+  background:var(--white);
+  box-shadow:0 3px 15px #888888;
+  color:var(--darkcyan);
+  z-index:999;
+    font-family:var(--f-normal);
+}
+header a{
+  font-size:19;
+  color:var(--black);
+}
+
+.music-box{
+  padding:20px 45px;
+  border-radius:10px;
+  box-shadow:0 0 6px #2b2b2b;
+  background:var(--black);
+}
+
+.head{
+  font-weight:700;
+  font-size:23px;
+  color:var(--white);
+}
+
+.cd,
+.head,
+.cntrl-btns{
+  margin:10px;
+  font-family:var(--f-style);
+}
+
+.cd{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3AlwS8TIur99IwD7JH8_PwAAAA%26pid%3DApi&f=1');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:top;
+}
+
+.cntrl-btns button{
+  margin:0px 7px;
+}
+
+.cdrotate{
+  animation:cdrot 6s linear infinite;
+}
+@keyframes cdrot{
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+

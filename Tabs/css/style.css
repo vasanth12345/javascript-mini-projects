@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital@1&family=Montserrat&display=swap');
+
+:root{
+--f-style: 'KoHo', sans-serif;
+--f-normal: 'Montserrat', sans-serif;
+
+--white:#fff;
+--black:#000;
+--red:#ff0000;
+--cyan:#00ffff;
+--darkcyan:#00d6d6;
+}
+*{
+   padding:0;
+   margin:0;
+   box-sizing:border-box;
+   text-decoration:none;
+ } 
+::selection{
+  background:var(--red);
+  color:var(--white);
+}
+
+.section{
+   position:relative;
+   height:auto;
+   width:100%;
+   background:var(--white);
+   color:var(--black);
+   border-bottom:3px solid var(--darkcyan);
+   padding:10px;
+ }
+ 
+.center{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   flex-direction:column;
+ }
+button{
+  padding:15px;
+  background:var(--white);
+  color:var(--black);
+  border-radius:15px;
+  border:none;
+  box-shadow:0 0 3px #6b6b6b,
+             0 0 4px #202020;
+}
+button:hover{
+  color:var(--darkcyan);
+}
+a:hover{
+  color:var(--red);
+}
+h2{
+  position:absolute;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:2rem;
+  text-align:center;
+}
+header{
+  width:100%;
+  height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px;
+  font-size:17px;
+  font-weight:600;
+  letter-spacing:3px;
+  background:var(--black);
+  box-shadow:0 3px 15px #171c1e;
+  color:var(--darkcyan);
+  z-index:999;
+    font-family:var(--f-normal);
+}
+ a{
+  font-size:19;
+  color:var(--white);
+}
+
+
+
+.profile{
+  height:80vh;
+  margin:20px 0px;
+  width:85%;
+  background:url('../loot/hill.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  border-radius:15px;
+  box-shadow:0 0 4px var(--black);
+}
+
+.head{
+  padding:15px;
+  margin:20px;
+  font-size:30px;
+  font-family:var(--f-normal);
+}
+.head h3{
+  padding:5px;
+  position:relative;
+}
+.head h3::before{
+  position:absolute;
+  content:'';
+  bottom:0;
+  left:0;
+  height:3px;
+  width:100%;
+  background:var(--cyan);
+}
+
+.tab{
+  height:65vh;
+  margin:20px 0;
+  border-radius:10px;
+  width:90%;
+  background:#ffd8d8;
+  overflow:hidden;
+  box-shadow:0 0 7px var(--black);
+}
+
+.tab .tab-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  align-items:center;
+}
+.tab-btn p{
+  flex:1;
+  text-align:center;
+  background:#2c2c2c;
+  color:var(--white);
+  padding:20px;
+}
+
+.tab-cntnt{
+  height:100%;
+  width:100%;
+  background:var(--white);
+}
+
+.tab-cntnt span{
+  margin:40px;
+  font-size:20px;
+  font-family:var(--f-normal);
+  font-weight:700;
+}
+
+
+.tab-btn .html.btns,
+.tab-btn .css.btns,
+.tab-btn .js.btns{
+  background:var(--white);
+  color:var(--black);
+}
+
+@media(max-width:360px){
+  .tab-cntnt span{
+     margin:18px;
+  }
+  .tab{
+    height:50vh;
+  }
+  .profile{
+  height:60vh;
+  }
+  
+  
+}

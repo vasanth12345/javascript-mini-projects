@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+<title>MUSIC PLAYER</title>
+</head>
+<body>
+ 
+<header>
+  
+  <div class="logo">
+    <p>Music Player</p>
+  </div>
+  
+  <div class="nav">
+    <a href="#">Home</a>
+  </div>
+  
+</header>
+
+<div class="section center">
+  
+  <div class="music-box center">
+    <div class="head">
+      <h3>Play</h3>
+    </div>
+    
+    <div class="cd">
+    </div>
+    
+    <div class="cntrl-btns">
+      
+    <button id="play" onclick="playsong()" type="button"><i class="fa fa-play" aria-hidden="true"></i></button>
+    
+    <button onclick="pausesong()" type="button"><i class="fa fa-pause" aria-hidden="true"></i></button>
+    
+    </div>
+    
+  </div>
+  
+</div>
+ 
+<script>
+
+const song = new Audio("loot/ill.mp3");
+
+function pausesong(){
+const cd = document.querySelector('.cd');
+  song.pause();
+  cd.classList.remove('cdrotate');
+}
+
+function playsong(){
+const cd = document.querySelector('.cd');
+  song.play();
+  cd.classList.add('cdrotate');
+}
+
+</script>   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

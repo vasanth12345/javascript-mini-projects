@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital@1&family=Montserrat&display=swap');
+
+:root{
+--f-style: 'KoHo', sans-serif;
+--f-normal: 'Montserrat', sans-serif;
+
+--white:#fff;
+--black:#000;
+--red:#ff0000;
+--cyan:#00ffff;
+--darkcyan:#00d6d6;
+}
+*{
+   padding:0;
+   margin:0;
+   box-sizing:border-box;
+   text-decoration:none;
+ } 
+::selection{
+  background:var(--red);
+  color:var(--white);
+}
+.section{
+   position:relative;
+   height:100vh;
+   width:100%;
+   background:url('../loot/hill2.jpg');
+   background-size:cover;
+   background-repeat:no-repeat;
+   background-position:center;
+   color:var(--white);
+   border-bottom:3px solid var(--darkcyan);
+ }
+.center{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   flex-direction:column;
+ }
+button{
+  padding:7px 15px;
+  background:var(--black);
+  color:var(--white);
+  border-radius:5px;
+  border:none;
+  box-shadow:0 0 3px #6b6b6b;
+  border:2px solid var(--black);
+}
+button:hover{
+  border:2px solid var(--black);
+  background:none;
+  color:var(--black);
+}
+a:hover{
+  color:var(--red);
+}
+h2{
+  position:absolute;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:2rem;
+  text-align:center;
+}
+header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px;
+  font-size:17px;
+  font-weight:600;
+  letter-spacing:3px;
+  background:var(--white);
+  box-shadow:0 3px 15px #171c1e;
+  color:var(--darkcyan);
+  z-index:3;
+    font-family:var(--f-normal);
+}
+ a{
+  font-size:19;
+  color:var(--black);
+}
+
+.box{
+  background:var(--white);
+  color:var(--black);
+  height:60%;
+  width:50%;
+  z-index:999;
+  font-family:var(--f-style);
+  border-radius:15px;
+}
+.box button{
+  font-family:var(--f-normal);
+  margin:20px 0px;
+} 
+.main{
+ position:absolute;
+ top: 0;
+ left:0;
+ height:100vh;
+ width:100%;
+ background:rgba(0,198,198,0.8);
+ z-index:1010;
+ backface-visibility:hidden;
+ 
+ visibility:hidden;
+ opacity:0;
+}
+.popup{
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%, -50%);
+ background:#e9e9e9;
+ height:55%;
+ width:45%;
+ z-index:1010;
+ border-radius:15px;
+ font-family:var(--f-normal);
+}
+.popup h3{
+  padding:20px 0px;
+}
+.popup .x{
+  position:absolute;
+  top:10px;
+  right:10px;
+  color:var(--red);
+  font-size:30px;
+  cursor:pointer;
+}
+.open{
+  visibility:visible;
+  opacity:1;
+}
+
+
+@media(max-width:360px){
+  
+ .box{
+  height:40%;
+  width:80%;
+ } 
+ .popup{
+  height:30%;
+  width:70%;  
+ }
+ 
+ 
+}

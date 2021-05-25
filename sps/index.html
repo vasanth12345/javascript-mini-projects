@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!-- author -->
+<meta name="author" content="vasanth">
+
+<!-- viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- main css -->
+<link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
+
+<title> STONE PAPER SCISSORS </title>
+</head>
+<body>
+  
+<main>
+
+<div class="pointable">
+  <div class="play players">
+    <h4>Player Score</h4>
+    <span id="pscore" >0</span>
+  </div>
+  <div class="play coms">
+    <h4>Computer Score</h4>
+    <span id="cscore" >0</span>
+  </div>
+</div>
+  
+<div class="welcome">
+  <h1>Stone Paper and Scissors</h1>
+  <button type="submit">Let's Play!!</button>
+</div> 
+
+<div class="match fadeOut">
+  
+  <div class="winner">
+    <h2>🔥🔥 Battle 🔥🔥</h2>
+  </div>
+  
+  <div class="hands">
+    
+    <img class="lefthand playerhand" src="loot/rock.png" alt="" /> 
+    <img class="comhand" src="loot/rock.png" alt="" />
+     
+  </div>
+  
+  <div class="heading">
+    <div class="options">
+      <button type="submit">rock</button>
+      <button type="submit">paper</button>
+      <button type="submit">scissors</button>
+    </div>
+    <h2>choose one option</h2>
+  </div>
+  
+</div>
+ 
+</main> 
+
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyDXSxIurjrVvideZzgjDBAyjoMb93pgu6Q",
+    authDomain: "stone-papper-scissors.firebaseapp.com",
+    projectId: "stone-papper-scissors",
+    storageBucket: "stone-papper-scissors.appspot.com",
+    messagingSenderId: "101276928675",
+    appId: "1:101276928675:web:9847be50904f6cb5f08d16",
+    measurementId: "G-WFWL10EXJ5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+<!-- main script -->
+<script src="assets/main.js"></script>
+
+</body>
+</html>
